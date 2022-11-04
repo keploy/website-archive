@@ -7,13 +7,13 @@
         var alert = $('.alert-msg'); // alert div for show alert message
         var input_ele = $(' .input');
         var form_impress = $('#mc_embed_signup-impress');
-        var form_news = $('#mc_embed_signup-news');
+        var object = {};
+
         // form submit event
         form_impress.on('submit', function(e) {
             e.preventDefault();
-            var input = document.querySelector('#beta-impress');
+            var input = document.querySelector('#newsletter-1');
             const formData = new FormData(input);
-            var object = {};
             formData.forEach((value, key) => {object[key] = value});
             var req_data = JSON.stringify(object);
 
