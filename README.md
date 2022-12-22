@@ -5,6 +5,12 @@
 # Keploy
 [Keploy](https://keploy.io) is a no-code testing platform that generates tests from API calls.
 
+## Color palette
+|Keploy Orange (Primary) |![#ff904d](https://placehold.co/15x15/ff904d/ff904d.png) `#ff904d`| rgb(255, 144, 77) | 	hsl(23, 100%, 65%) | CMYK(0 ,44, 70, 0) |
+| --------------- | --------------- | --------------- | --------------- |--------------- |
+|Keploy Brown (Secondary) |![#644a3c](https://placehold.co/15x15/644a3c/644a3c.png) `#644a3c`|rgb(100, 74, 60) | 	hsl(21, 25%, 31%)| CMYK(0, 26, 40, 61) |
+|Keploy Black (Secondary) |![#000000](https://placehold.co/15x15/000000/000000.png) `#000000`|rgb(0, 0, 0) | 	hsl(0, 0%, 0%)| CMYK(3, 3, 3, 100) |
+|Keploy White (Secondary) |![#FFFFFF](https://placehold.co/15x15/FFFFFF/FFFFFF.png) `#000000`|rgb(255, 255, 255) | 	hsl(0, 0%, 100%)| CMYK(0, 0, 0, 0) |
 
 ## Community support
 We'd love to collaborate with you to make Keploy great. To get started:
