@@ -117,7 +117,7 @@ the community.
 ## Contact info
 
 * [Slack](https://join.slack.com/t/keploy/shared_invite/zt-12rfbvc01-o54cOG0X1G6eVJTuI_orSA)
-* [Mail](support@keploy.io)
+* [Mail](hello@keploy.io)
 
 ## Support 🙏 
 
