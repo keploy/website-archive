@@ -32,3 +32,65 @@ We'd love to collaborate with you to make Keploy great. To get started:
 * [Slack](https://join.slack.com/t/keploy/shared_invite/zt-12rfbvc01-o54cOG0X1G6eVJTuI_orSA) - Discussions with the community and the team.
 * [GitHub](https://github.com/keploy/keploy/issues) - For bug reports and feature requests.
 
+## Contribution Guidelines
+
+Please read the [CONTRIBUTING](/CONTRIBUTING.md) guide and the Color Palette guide before you submit any pull requests.
+
+Maintainers and contributors to this project are expected to conduct themselves in a respectful way.
+See the [ Code of Conduct](https://github.com/keploy/website/blob/main/code-of-conduct.md) as a reference.
+
+## Technology Stack
+
+We use a variety of technologies to build the web interface and support the community. They include:
+
+- [Html](https://html.com/)
+- [Css]
+- [Javascript](https://www.javascript.com/)
+- [GitHub Actions](https://github.com/features/actions)
+
+## Installation
+
+If you wish to contribute, we highly recommend following the guidelines mentioned below.
+
+**1.**  Fork [this](https://github.com/keploy/website) repository.
+
+**2.**  Clone your forked copy of the project.
+
+```bash
+   git clone https://github.com/<GITHUB_USERNAME>/website.git
+```
+
+**3.** Navigate to the project directory.
+```
+   cd website
+```
+
+**4.** Make changes in source code.
+
+**5.** Stage your changes and commit.
+
+```
+   git add .
+   git commit -m "<your_commit_message>"
+```
+
+**6.** Push your local commits to the remote repo.
+
+```
+   git push
+```
+
+**7.** Create a [PR](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
+
+
+
+
+<h2 align="center"> Code of Conduct 📜</h2>
+	
+To maintain a safe and inclusive space for everyone, to learn and grow, contributors are advised to follow the [Code of Conduct](./CODE_OF_CONDUCT.md) and also go through [Guidelines for Contributing](./CONTRIBUTING.md) atleast once.
+
+## Support 🙏 
+
+This project needs a ⭐️ from you. Don't forget to leave a star ⭐️
+
+## Happy Contributions !!
