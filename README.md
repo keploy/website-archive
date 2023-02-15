@@ -60,29 +60,66 @@ If you wish to contribute, we highly recommend following the guidelines mentione
    git clone https://github.com/<GITHUB_USERNAME>/website.git
 ```
 
-**3.** Navigate to the project directory.
-```
-   cd website
-```
+**3.** Open your preferred IDE (Integrated Development Environment) such as Visual Studio Code.
 
-**4.** Make changes in source code.
+**4.** Navigate to the project directory. Open the folder 'website' in your IDE.
 
-**5.** Stage your changes and commit.
+**5.** Make changes in source code.
+
+**6.** Save the file and open it in your web browser by simply double-clicking on the file.
+
+**7.** Alternatively, you can also open the file from within the IDE using the "Open in Default Browser" feature or a browser extension like "Live Server" for VSCode.
+
+
+**8.** Stage your changes and commit.
 
 ```
    git add .
    git commit -m "<your_commit_message>"
 ```
 
-**6.** Push your local commits to the remote repo.
+**9.** Push your local commits to the remote repo.
 
 ```
    git push
 ```
 
-**7.** Create a [PR](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
+**10.** Create a [PR](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
 
 
+## <a name="commit-signing">Signing-off on Commits (Developer Certificate of Origin)</a>
+
+To contribute to this project, you must agree to the Developer Certificate of
+Origin (DCO) for each commit you make. The DCO is a simple statement that you,
+as a contributor, have the legal right to make the contribution.
+
+See the [DCO](https://developercertificate.org) file for the full text of what you must agree to
+and how it works [here](https://github.com/probot/dco#how-it-works).
+To signify that you agree to the DCO for contributions, you simply add a line to each of your
+git commit messages:
+
+```
+Signed-off-by: Jane Smith <jane.smith@example.com>
+```
+
+In most cases, you can add this signoff to your commit automatically with the
+`-s` or `--signoff` flag to `git commit`. You must use your real name and a reachable email
+address (sorry, no pseudonyms or anonymous contributions). An example of signing off on a commit:
+
+```
+$ commit -s -m “my commit message w/signoff”
+```
+
+To ensure all your commits are signed, you may choose to add this alias to your global `.gitconfig`:
+
+_~/.gitconfig_
+
+```
+[alias]
+  amend = commit -s --amend
+  cm = commit -s -m
+  commit = commit -s
+```
 
 
 <h2 align="center"> Code of Conduct 📜</h2>

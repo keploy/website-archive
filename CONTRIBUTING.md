@@ -36,27 +36,31 @@ If you wish to contribute, we highly recommend following the guidelines mentione
    git clone https://github.com/<GITHUB_USERNAME>/website.git
 ```
 
-**3.** Navigate to the project directory.
-```
-   cd website
-```
+**3.** Open your preferred IDE (Integrated Development Environment) such as Visual Studio Code.
 
-**4.** Make changes in source code.
+**4.** Navigate to the project directory. Open the folder 'website' in your IDE.
 
-**5.** Stage your changes and commit.
+**5.** Make changes in source code.
+
+**6.** Save the file and open it in your web browser by simply double-clicking on the file.
+
+**7.** Alternatively, you can also open the file from within the IDE using the "Open in Default Browser" feature or a browser extension like "Live Server" for VSCode.
+
+
+**8.** Stage your changes and commit.
 
 ```
    git add .
    git commit -m "<your_commit_message>"
 ```
 
-**6.** Push your local commits to the remote repo.
+**9.** Push your local commits to the remote repo.
 
 ```
    git push
 ```
 
-**7.** Create a [PR](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
+**10.** Create a [PR](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
 
 
 ## <a name="commit-signing">Signing-off on Commits (Developer Certificate of Origin)</a>
