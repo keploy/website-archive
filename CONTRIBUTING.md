@@ -51,7 +51,7 @@ If you wish to contribute, we highly recommend following the guidelines mentione
 
 ```
    git add .
-   git commit -m "<your_commit_message>"
+   git commit -s -m "<your_commit_message>"
 ```
 
 **9.** Push your local commits to the remote repo.
