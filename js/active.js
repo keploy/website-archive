@@ -17,6 +17,10 @@
                     columnWidth: '.single_gallery_item'
                 }
             });
+            var inititalFilterValue = $('.btn.active').attr('data-filter');
+            $grid.isotope({
+                filter: inititalFilterValue
+            })
         });
     }
 
