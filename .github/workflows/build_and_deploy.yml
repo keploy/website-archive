@@ -1,0 +1,21 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build HTML/CSS
+        run: |
+          # Add any commands here that you need to run to build your HTML/CSS files.
+          # For example:
+          # npm install
+          # npm run build
