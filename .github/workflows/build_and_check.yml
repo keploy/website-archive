@@ -1,26 +1,31 @@
-name: PR Preview
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Deploy to AWS S3
 
 on:
-  pull_request:
-    branches: [ main ]
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]  
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build project
-        run: npm run build
-
-      - name: Deploy to AWS
-        run: |
-          aws s3 sync dist s3://${{ secrets.S3_BUCKET }} --region ${{ secrets.S3_BUCKET_REGION }}
-          aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths '/*'
+    - uses: actions/checkout@v3
+    - name: Deploy
+      uses: reggionick/s3-deploy@v3
+      with:
+        folder: "."
+        bucket: ${{ secrets.S3_BUCKET }}
+        bucket-region: ${{ secrets.S3_BUCKET_REGION }}
+        dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+        invalidation: /
+        delete-removed: true
+        no-cache: true
+        private: true   
