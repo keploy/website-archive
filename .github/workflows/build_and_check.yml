@@ -12,11 +12,6 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Copy source files
-      run: |
-        mkdir -p ./dist
-        cp -r ./src/* ./dist/
     - name: Deploy
       uses: jakejarvis/s3-sync-action@master
       with:
