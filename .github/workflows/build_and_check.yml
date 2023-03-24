@@ -25,4 +25,4 @@ jobs:
         invalidation: /
         delete-removed: true
         no-cache: true
-        private: true 
+        private: true   
