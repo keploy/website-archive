@@ -1,25 +1,22 @@
-name: Deploy to AWS S3 on Pull Request
+name: S3 Preview
 
 on:
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-    env:
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
     steps:
-    - name: Deploy
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Build and deploy to S3
       uses: jakejarvis/s3-sync-action@master
       with:
-        folder: "."
-        bucket: ${{ secrets.S3_BUCKET }}
-        bucket-region: ${{ secrets.S3_BUCKET_REGION }}
-        dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-        invalidation: /
-        delete-removed: true
-        no-cache: true
-        private: true   
+        args: --acl public-read --follow-symlinks --delete
+      env:
+        AWS_S3_BUCKET: my-bucket-name
+        AWS_REGION: us-east-1
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
