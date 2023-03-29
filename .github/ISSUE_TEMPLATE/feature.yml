@@ -1,0 +1,42 @@
+name: Feature request
+description: Suggest a feature to improve Keploy
+title: "[feature]: "
+labels: [feature]
+body:
+- type: markdown
+  attributes:
+    value: |
+      Thank you for taking the time to request a feature for Keploy
+
+- type: textarea
+  attributes:
+    label: Summary
+    description: One paragraph description of the feature
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Why should this be worked on?
+    description: A concise description of the problems or use cases for this feature request
+  validations:
+    required: true
+
+- type: checkboxes
+  id: no-duplicate-issues
+  attributes:
+      label: "Checklist"
+      options:
+        - label: "I checked and didn't find similar issue"
+          required: true
+
+        - label: "I have read the [Contributing Guidelines](https://github.com/keploy/website/blob/main/CONTRIBUTING.md)"
+          required: true
+
+        - label: "I am willing to work on this issue (blank for no)"
+          required: false
+
+- type: markdown
+  attributes:
+    value: |
+      Please add the respective Label to the Issue
