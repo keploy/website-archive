@@ -43,8 +43,8 @@ See the [ Code of Conduct](https://github.com/keploy/website/blob/main/code-of-c
 
 We use a variety of technologies to build the web interface and support the community. They include:
 
-- [Html](https://html.com/)
-- [Css]
+- [HTML](https://html.com/)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [Javascript](https://www.javascript.com/)
 - [GitHub Actions](https://github.com/features/actions)
 
