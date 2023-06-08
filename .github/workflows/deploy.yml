@@ -16,10 +16,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Set Node.js 18.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.x
+        cache: 'npm'
+    - name: Install dependencies
+      run: npm install
+    - run: npm run build --if-present
+
     - name: Deploy
       uses: reggionick/s3-deploy@v3
       with:
-        folder: "."
+        folder: "dist"
         bucket: ${{ secrets.S3_BUCKET }}
         bucket-region: ${{ secrets.S3_BUCKET_REGION }}
         dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}

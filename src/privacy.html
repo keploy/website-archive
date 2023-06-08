@@ -11,16 +11,6 @@
 	<meta name="description" content="Keploy generates e2e, functional test cases and data mocks from API calls. Dependency mocks(stubs) are also captured">
 	<meta name="keywords" content="API testing, automated e2e Testing, functional testing, developer testing, Service Mocking, Dependency Mocking">
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="vendors/linericon/style.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-	<link rel="stylesheet" href="vendors/animate-css/animate.css">
-	<link rel="stylesheet" href="vendors/flaticon/flaticon.css">
-	<!-- main css -->
-	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -31,7 +21,7 @@
 					<div class="container">
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<a class="navbar-brand logo_h" href="index.html">
-							<img class="logo" src="img/logo.png" alt="logo keploy">
+							<img class="logo" src="<%= require('./img/logo.png').default %>"" alt="logo keploy">
 						</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-bar"></span>
@@ -174,7 +164,7 @@
                         <h3>Copyright © 2023  Keploy Inc.</h3>
                     </div>
                     <p>Developers experience for e2e testing. Toolkit that creates test-cases and data mocks from API calls, DB queries, etc.</p>
-<!--						<img src="img/cncf-keploy.png" class="w-75" alt="cncf_logo">-->
+<!--						<img src="<%= require('./img/cncf-keploy.png').default %>"" class="w-75" alt="cncf_logo">-->
                     <p><a href="https://docs.keploy.io/privacy-policy/" style="color: #f37d36;">Privacy Policy</a></p>
                 </aside>
             </div>
@@ -239,25 +229,6 @@
 <!-- Place this tag in your head or just before your close body tag. -->
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/popper.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/stellar.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-<script src="vendors/isotope/isotope-min.js"></script>
-<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-<script src="js/jquery.ajaxchimp.min.js"></script>
-<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-<script src="vendors/counter-up/jquery.counterup.min.js"></script>
-<script src="js/mail-script.js"></script>
-<script src="js/active.js"></script>
-
-<!--gmaps Js-->
-<!---<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-<script src="js/gmaps.min.js"></script>--->
-<script src="js/theme.js"></script>
 </body>
 
 </html>

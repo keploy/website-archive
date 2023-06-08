@@ -49,20 +49,6 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
-### Web ###
-*.asp
-*.cer
-*.csr
-*.css
-*.htm
-*.html
-*.js
-*.jsp
-*.php
-*.rss
-*.wasm
-*.wat
-*.xhtml
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -92,5 +78,8 @@ $RECYCLE.BIN/
 
 # Jetbrains IDEs
 .idea/*
+
+node_modules/
+dist/
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,linux,web

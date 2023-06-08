@@ -5,23 +5,10 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="icon" href="img/favicon.png" type="image/png">
 	<title>Open Source Stubs and API Test Generator for Developer</title>
 	<meta name="description" content="Keploy is AI based test case and stubs/mocks generator for e2e testing. 90% test coverage in minutes with open source testing tool">
 	<meta name="keywords" content="API testing, e2e Testing, ai testing, open source ai testing tool, Service Mocking, Dependency Mocking">
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="vendors/linericon/style.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-	<link rel="stylesheet" href="vendors/animate-css/animate.css">
-	<link rel="stylesheet" href="vendors/flaticon/flaticon.css">
-	<link rel="canonical" href="https://keploy.io/">
 
-	<!-- main css -->
-	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -34,7 +21,7 @@
 					<div class="container">
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<a class="navbar-brand logo_h" href="index.html">
-							<img class="logo" src="img/logo.png" alt="logo keploy">
+							<img class="logo" src="<%= require('./img/logo.png').default %>"" alt="logo keploy">
 						</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-bar"></span>
@@ -97,7 +84,7 @@
 						</div>
 					</div>
 					<div class="col-lg-7 home_right_img justify-content-center align-items-center">
-						<img src="img/how-keploy-works.gif" class="home_right_img keploy_work" alt="Convert API calls to Test Cases">
+						<img src="<%= require('./img/how-keploy-works.gif').default %>"" class="home_right_img keploy_work" alt="Convert API calls to Test Cases">
 <!--						<div class="embed-responsive embed-responsive-16by9 img-fluid">-->
 
 <!--							<iframe class="embed-responsive-item "  src="https://www.youtube.com/embed/i7OqSVHjY1k?modestbranding=1&showinfo=0&rel=0&iv_load_policy=3" allowfullscreen ></iframe>-->
@@ -108,7 +95,7 @@
 					</div>
 					<div class="col-lg-12 main_title">
 							<a href="https://landscape.cncf.io/card-mode?selected=keploy">
-								<img src="img/cncf-landscape.png" class="cncf-logo" alt="CNCF logo">
+								<img src="<%= require('./img/cncf-landscape.png').default %>"" class="cncf-logo" alt="CNCF logo">
 							</a>
 					</div>
 				</div>
@@ -136,14 +123,14 @@
 			<div class="row align-items-center">
 				<div class="col-lg-6">
 					<div class="left_features">
-						<img class="img-fluid" src="img/test-env1.jpg" alt="Problems with end to end test cases">
+						<img class="img-fluid" src="<%= require('./img/test-env1.jpg').default %>"" alt="Problems with end to end test cases">
 					</div>
 				</div>
 				<div class="col-lg-5 offset-lg-1">
 					<!-- single features -->
 					<div class="single_feature">
 						<div class="feature_head">
-							<img class="lnr" src="img/code.gif" alt="Problems with end to end test cases">
+							<img class="lnr" src="<%= require('./img/code.gif').default %>"" alt="Problems with end to end test cases">
 							<!--							<span class="lnr lnr-code"></span>-->
 							<h4>Writing Test Cases</h4>
 						</div>
@@ -154,7 +141,7 @@
 					<!-- single features -->
 					<div class="single_feature">
 						<div class="feature_head">
-							<img class="lnr" src="img/db.gif" alt="Problems with end to end test cases">
+							<img class="lnr" src="<%= require('./img/db.gif').default %>"" alt="Problems with end to end test cases">
 							<!--							<span class="lnr lnr-database"></span>-->
 							<h4>Creating Testing Environments</h4>
 						</div>
@@ -166,7 +153,7 @@
 					<div class="single_feature">
 						<div class="feature_head">
 <!--							<span class="lnr lnr-unlink"></span>-->
-							<img class="lnr" src="img/link-unlink.gif" alt="Problems with end to end test cases">
+							<img class="lnr" src="<%= require('./img/link-unlink.gif').default %>"" alt="Problems with end to end test cases">
 							<h4>Un-Realistic Data Mocks</h4>
 						</div>
 						<div class="feature_content">
@@ -229,7 +216,7 @@
 							</div>
 							<div class="col-lg-12 text-center ">
 								<div class="chart_img">
-									<img class="img-fluid " src="img/record-replay.gif" alt="Dependency mocking">
+									<img class="img-fluid " src="<%= require('./img/record-replay.gif').default %>"" alt="Dependency mocking">
 								</div>
 							</div>
 							<div class="col-lg-12 text-center ">
@@ -249,7 +236,7 @@
 							</div>
 							<div class="col-lg-12 text-center">
 								<div class="chart_img ">
-									<img class="img-fluid" src="img/record-tc.gif" alt="Record Replay Test Cases">
+									<img class="img-fluid" src="<%= require('./img/record-tc.gif').default %>"" alt="Record Replay Test Cases">
 								</div>
 							</div>
 							<div class="col-lg-12 text-center ">
@@ -269,7 +256,7 @@
 							</div>
 							<div class="col-lg-12 text-center">
 								<div class="chart_img">
-									<img class="img-fluid " src="img/replay-tc.gif" alt="unit test file">
+									<img class="img-fluid " src="<%= require('./img/replay-tc.gif').default %>"" alt="unit test file">
 								</div>
 							</div>
 							<div class="col-lg-12 text-center ">
@@ -308,7 +295,7 @@
 			<div id="fellowship-linkup" class="row features_content">
 				<div class="col-lg-4 offset-lg-1">
 					<div class="big_f_left">
-						<img class="img-fluid" src="img/f-img1.png" alt="">
+						<img class="img-fluid" src="<%= require('./img/f-img1.png').default %>"" alt="">
 					</div>
 				</div>
 				<div class="col-lg-4 offset-lg-2">
@@ -338,7 +325,7 @@
 				</div>
 				<div class="col-lg-5 offset-lg-2">
 					<div class="big_f_left">
-						<img class="img-fluid" src="img/f-img2.png" alt="">
+						<img class="img-fluid" src="<%= require('./img/f-img2.png').default %>"" alt="">
 					</div>
 				</div>
 				<div class="border-line"></div>
@@ -370,13 +357,13 @@
 						<div class="portfolio-menu text-center">
 							<button class="btn active" data-filter="*:not(.norepeat)">All</button>
 							<button class="btn" data-filter=".go">
-								<img class="language" src="img/frameworks/go.png" alt="Golang">
+								<img class="language" src="<%= require('./img/frameworks/go.png').default %>"" alt="Golang">
 							</button>
 							<button class="btn" data-filter=".java">
-								<img class="language" src="img/frameworks/java.png" alt="Java">
+								<img class="language" src="<%= require('./img/frameworks/java.png').default %>"" alt="Java">
 							</button>
 							<button class="btn" data-filter=".node">
-								<img class="language" src="img/frameworks/node.png" alt="Node">
+								<img class="language" src="<%= require('./img/frameworks/node.png').default %>"" alt="Node">
 							</button>
 <!--							<button class="btn" data-filter=".video">Python</button>-->
 						</div>
@@ -387,10 +374,10 @@
 			<div class="row alime-portfolio">
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item go mb-30 wow fadeInUp" data-wow-delay="100ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/chi.png" alt="chi router">
+						<img src="<%= require('./img/frameworks/chi.png').default %>"" alt="chi router">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/go/supported-frameworks#1-chi" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -399,10 +386,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item go  mb-30 wow fadeInUp" data-wow-delay="300ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/gin.png" alt="Gin router">
+						<img src="<%= require('./img/frameworks/gin.png').default %>"" alt="Gin router">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/go/supported-frameworks#2-gin" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -411,10 +398,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item go mb-30 wow fadeInUp" data-wow-delay="500ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/echo.png" alt="Echo router">
+						<img src="<%= require('./img/frameworks/echo.png').default %>"" alt="Echo router">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/go/supported-frameworks#3-echo" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -423,10 +410,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item go mb-30 wow fadeInUp" data-wow-delay="700ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/webgo.png" alt="Webgo router">
+						<img src="<%= require('./img/frameworks/webgo.png').default %>"" alt="Webgo router">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/go/supported-frameworks#4-webgo" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -435,10 +422,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item go mb-30 wow fadeInUp" data-wow-delay="100ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/gorilla.png" alt="Gorilla Mux router">
+						<img src="<%= require('./img/frameworks/gorilla.png').default %>"" alt="Gorilla Mux router">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/go/supported-frameworks#5-gorillamux" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -447,10 +434,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item go mb-30 wow fadeInUp" data-wow-delay="300ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/mongo.png" alt="Mongo DB">
+						<img src="<%= require('./img/frameworks/mongo.png').default %>"" alt="Mongo DB">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/go/supported-frameworks#1-mongodb" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -459,10 +446,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item go mb-30 wow fadeInUp" data-wow-delay="500ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/dynamo.png" alt="Dynamodb">
+						<img src="<%= require('./img/frameworks/dynamo.png').default %>"" alt="Dynamodb">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/go/supported-frameworks#2-dynamodb" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -471,10 +458,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item go mb-30 wow fadeInUp" data-wow-delay="700ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/sql.png" alt="SQL Driver">
+						<img src="<%= require('./img/frameworks/sql.png').default %>"" alt="SQL Driver">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/go/supported-frameworks#3-sql-driver" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -483,10 +470,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item  go mb-30 wow fadeInUp" data-wow-delay="100ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/elastic.png" alt="Elastic">
+						<img src="<%= require('./img/frameworks/elastic.png').default %>"" alt="Elastic">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/go/supported-frameworks#4-elasticsearch" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -495,10 +482,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item go mb-30 wow fadeInUp" data-wow-delay="300ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/redis.png" alt="Redis">
+						<img src="<%= require('./img/frameworks/redis.png').default %>"" alt="Redis">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/go/supported-frameworks#5-redis" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -507,10 +494,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item go mb-30 wow fadeInUp" data-wow-delay="500ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/grpc.png" alt="GRPC">
+						<img src="<%= require('./img/frameworks/grpc.png').default %>"" alt="GRPC">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/go/supported-frameworks#grpc" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -519,10 +506,10 @@
 
 			<div class="col-4 col-sm-3 col-lg-2 single_gallery_item go mb-30 wow fadeInUp" data-wow-delay="500ms">
 				<div class="single-portfolio-content">
-					<img src="img/frameworks/nethttp.png" alt="net/http">
+					<img src="<%= require('./img/frameworks/nethttp.png').default %>"" alt="net/http">
 					<div class="hover-content">
 						<a href="https://docs.keploy.io/docs/go/supported-frameworks#nethttp" class="portfolio-img">
-							<img class="docs" src="img/url.svg" alt="Docs link">
+							<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 						</a>
 					</div>
 				</div>
@@ -530,10 +517,10 @@
 
 			<div class="col-4 col-sm-3 col-lg-2 single_gallery_item node mb-30 wow fadeInUp" data-wow-delay="500ms">
 				<div class="single-portfolio-content">
-					<img src="img/frameworks/octokit.png" alt="octokit">
+					<img src="<%= require('./img/frameworks/octokit.png').default %>"" alt="octokit">
 					<div class="hover-content">
 						<a href="https://docs.keploy.io/docs/typescript/supported-frameworks#1-octokit" class="portfolio-img">
-							<img class="docs" src="img/url.svg" alt="Docs link">
+							<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 						</a>
 					</div>
 				</div>
@@ -541,10 +528,10 @@
 
 			<div class="col-4 col-sm-3 col-lg-2 single_gallery_item node mb-30 wow fadeInUp" data-wow-delay="500ms">
 				<div class="single-portfolio-content">
-					<img src="img/frameworks/express.png" alt="Express js">
+					<img src="<%= require('./img/frameworks/express.png').default %>"" alt="Express js">
 					<div class="hover-content">
 						<a href="https://docs.keploy.io/docs/typescript/supported-frameworks#1-express" class="portfolio-img">
-							<img class="docs" src="img/url.svg" alt="Docs link">
+							<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 						</a>
 					</div>
 				</div>
@@ -552,10 +539,10 @@
 
 			<div class="col-4 col-sm-3 col-lg-2 single_gallery_item java mb-30 wow fadeInUp" data-wow-delay="500ms">
 				<div class="single-portfolio-content">
-					<img src="img/frameworks/springboot.png" alt="Springboot">
+					<img src="<%= require('./img/frameworks/springboot.png').default %>"" alt="Springboot">
 					<div class="hover-content">
 						<a href="https://docs.keploy.io/docs/java/quickstart/spring-sql" class="portfolio-img">
-							<img class="docs" src="img/url.svg" alt="Docs link">
+							<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 						</a>
 					</div>
 				</div>
@@ -563,10 +550,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item java norepeat mb-30 wow fadeInUp" data-wow-delay="500ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/sql.png" alt="SQL Databases">
+						<img src="<%= require('./img/frameworks/sql.png').default %>"" alt="SQL Databases">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/java/installation" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -574,10 +561,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item java norepeat mb-30 wow fadeInUp" data-wow-delay="500ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/dynamo.png" alt="DynamoDB JAVA">
+						<img src="<%= require('./img/frameworks/dynamo.png').default %>"" alt="DynamoDB JAVA">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/java/installation" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -585,10 +572,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item java mb-30 wow fadeInUp" data-wow-delay="500ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/postgres.png" alt="Postgresql JAVA">
+						<img src="<%= require('./img/frameworks/postgres.png').default %>"" alt="Postgresql JAVA">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/java/installation" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -596,10 +583,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item java mb-30 wow fadeInUp" data-wow-delay="500ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/oracledb.png" alt="OracleDB JAVA">
+						<img src="<%= require('./img/frameworks/oracledb.png').default %>"" alt="OracleDB JAVA">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/java/installation" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -607,10 +594,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item java mb-30 wow fadeInUp" data-wow-delay="500ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/mariadb.png" alt="MariaDB JAVA">
+						<img src="<%= require('./img/frameworks/mariadb.png').default %>"" alt="MariaDB JAVA">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/java/installation" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -618,10 +605,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item java mb-30 wow fadeInUp" data-wow-delay="500ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/h2db.png" alt="H2 JAVA">
+						<img src="<%= require('./img/frameworks/h2db.png').default %>"" alt="H2 JAVA">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/java/installation" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -629,10 +616,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item java mb-30 wow fadeInUp" data-wow-delay="500ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/googlemaps.png" alt="Google Maps JAVA">
+						<img src="<%= require('./img/frameworks/googlemaps.png').default %>"" alt="Google Maps JAVA">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/java/installation" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -640,10 +627,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item java mb-30 wow fadeInUp" data-wow-delay="500ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/apacheclient.png" alt="Apache client JAVA">
+						<img src="<%= require('./img/frameworks/apacheclient.png').default %>"" alt="Apache client JAVA">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/java/installation" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -651,10 +638,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item java mb-30 wow fadeInUp" data-wow-delay="500ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/okhttp.png" alt="OKHTTP JAVA">
+						<img src="<%= require('./img/frameworks/okhttp.png').default %>"" alt="OKHTTP JAVA">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/java/installation" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -662,10 +649,10 @@
 
 				<div class="col-4 col-sm-3 col-lg-2 single_gallery_item java mb-30 wow fadeInUp" data-wow-delay="500ms">
 					<div class="single-portfolio-content">
-						<img src="img/frameworks/s3.png" alt="S3 JAVA">
+						<img src="<%= require('./img/frameworks/s3.png').default %>"" alt="S3 JAVA">
 						<div class="hover-content">
 							<a href="https://docs.keploy.io/docs/java/installation" class="portfolio-img">
-								<img class="docs" src="img/url.svg" alt="Docs link">
+								<img class="docs" src="<%= require('./img/url.svg').default %>"" alt="Docs link">
 							</a>
 						</div>
 					</div>
@@ -697,7 +684,7 @@
 
 		<div class="col-lg-4 col-md-6 mb-2" data-aos="fade-up" data-aos-delay="200">
 			<div class="service-box blue">
-				<img class=" icon" src="img/github.png" alt="github icon"/>
+				<img class=" icon" src="<%= require('./img/github.png').default %>" alt="github icon"/>
 				<h3>Github</h3>
 				<p>Check out open-source repo, request new features, or contribute.</p>
 				<a href="https://github.com/keploy/keploy" class="read-more"><span>Read More > </span> <i class="bi bi-arrow-right"></i></a>
@@ -706,7 +693,7 @@
 
 		<div class="col-lg-4 col-md-6 mb-2" data-aos="fade-up" data-aos-delay="300">
 			<div class="service-box orange">
-				<img class=" icon" src="img/slack.png" alt="slack icon"/>
+				<img class=" icon" src="<%=require('./img/slack.png').default%>" alt="slack icon"/>
 				<h3>Slack</h3>
 				<p>
 					Get live support, post questions for the community.
@@ -717,7 +704,7 @@
 
 		<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
 			<div class="service-box green">
-				<img class=" icon" src="img/twitter.png" alt="twitter icon"/>
+				<img class=" icon" src="<%=require('./img/twitter.png').default%>" alt="twitter icon"/>
 				<h3>Twitter</h3>
 				<p>
 					Stay up to date on product and event announcements.
@@ -832,20 +819,6 @@
 	<!-- Place this tag in your head or just before your close body tag. -->
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/popper.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/stellar.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-	<script src="vendors/isotope/isotope-min.js"></script>
-	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-	<script src="js/jquery.ajaxchimp.min.js"></script>
-	<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-	<script src="vendors/counter-up/jquery.counterup.min.js"></script>
-	<script src="js/mail-script.js"></script>
-	<script src="js/active.js"></script>
 	<script>
 		;(function() {
 			var script = document.createElement('script');
@@ -858,7 +831,6 @@
 	<!--gmaps Js-->
 	<!---<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="js/gmaps.min.js"></script>--->
-	<script src="js/theme.js"></script>
 </body>
 
 </html>
