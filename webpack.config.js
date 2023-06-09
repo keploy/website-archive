@@ -19,6 +19,7 @@ module.exports = {
     output: {
       filename: '[name].js',
       path: path.resolve(__dirname, 'dist'),
+      assetModuleFilename: "assets/[name][hash][ext][query]",
     },
     module: {
         rules: [
@@ -47,38 +48,59 @@ module.exports = {
             ],
           },
           {
-            test: /\.(png|svg|jpg|jpeg|gif)$/, // Apply rule to images (.png, .svg, .jpg, .jpeg, .gif)
-            use: [
-              'file-loader', // This loader resolves import/require() on a file into a url and emits the file into the output directory.
-              {
-                loader: 'image-webpack-loader', // Next, we use the image-webpack-loader to optimize images
-                options: {
-                  name: '[name][hash].[ext]',
-                  esModule: false,
-                  mozjpeg: {
-                    progressive: true,
-                  },
-                  // optipng.enabled: false will disable optipng
-                  optipng: {
-                    enabled: true,
-                  },
-                  pngquant: {
-                    quality: [0.65, 0.90],
-                    speed: 4
-                  },
-                  gifsicle: {
-                    interlaced: true,
-                    optimizationLevel: 3,
-                  },
-                  // the webp option will enable WEBP
-                  webp: {
-                    quality: 75,
-                    enabled: true,
-                  }
-                }
-              },
-            ],
+            test: /\.(svg|png|jpg|jpeg|gif)$/, // Apply rule to images (.png, .svg, .jpg, .jpeg, .gif)
+            include: path.resolve(__dirname, "src"),
+            type: 'asset/resource',
+            generator: {
+              filename: "assets/[name][hash][ext][query]",
+            },
+            // use: [
+            //   'file-loader', // This loader resolves import/require() on a file into a url and emits the file into the output directory.
+            //   {
+            //     loader: 'image-webpack-loader', // Next, we use the image-webpack-loader to optimize images
+            //     options: {
+            //       name: '[name][hash].[ext]',
+            //       esModule: false,
+            //       // mozjpeg: {
+            //       //   progressive: true,
+            //       // },
+            //       // // optipng.enabled: false will disable optipng
+            //       // optipng: {
+            //       //   enabled: false,
+            //       // },
+            //       // // pngquant: {
+            //       // //   quality: [0.8, 1],
+            //       // // },
+            //       // gifsicle: {
+            //       //   interlaced: true,
+            //       //   optimizationLevel: 3,
+            //       // },
+            //       // // the webp option will enable WEBP
+            //       // webp: {
+            //       //   quality: 75,
+            //       //   enabled: true,
+            //       // }
+            //     }
+            //   },
+            // ],
           },
+          {
+            test: /\.xml/,
+            include: path.resolve(__dirname, "src"),
+            type: 'asset/resource',
+            
+            generator: {
+                filename: 'sitemap.xml',
+            },
+        },
+        {
+            test: /\.txt/,
+            include: path.resolve(__dirname, "src"),
+            type: 'asset/resource',
+            generator: {
+                filename: 'robots.txt',
+            },
+        },
         ],
       },
     optimization: {
@@ -108,49 +130,80 @@ module.exports = {
     }),
           new TerserPlugin(),
           new ImageMinimizerPlugin({
-            minimizerOptions: {
-              implementation: ImageMinimizerPlugin.imageminMinify,
-              plugins: [
-                ['gifsicle', { interlaced: true }],
-                ['jpegtran', { progressive: true }],
-                ['optipng', { optimizationLevel: 5 }],
-                [
-                  "svgo",
-                  {
-                    plugins: [
-                      "removeTitle",
-                      "removeDesc",
-                      "removeUselessStrokeAndFill",
-                      "removeUnusedNS",
-                      "cleanupIDs",
-                      "convertShapeToPath",
-                      "cleanupNumericValues",
-                      "removeRasterImages",
-                      "removeDimensions",
-                      "removeStyleElement",
-                      "removeScriptElement",
-                      // your previous configuration...
-                      {
-                        name: "preset-default",
-                        params: {
-                          overrides: {
-                            removeViewBox: false,
-                            addAttributesToSVGElement: {
-                              params: {
-                                attributes: [
-                                  { xmlns: "http://www.w3.org/2000/svg" },
-                                ],
-                              },
-                            },
-                          },
-                        },
-                      },
-                    ],
+            minimizer: {
+              implementation: ImageMinimizerPlugin.sharpMinify,
+              options: {
+                encodeOptions: {
+                  // Your options for `sharp`
+                  // https://sharp.pixelplumbing.com/api-output
+                  jpeg: {
+                    // https://sharp.pixelplumbing.com/api-output#jpeg
+                    mozjpeg: true,
+                    progressive: true,
                   },
-                ]
-                
-              ],
+
+                  // png by default sets the quality to 100%, which is same as lossless
+                  // https://sharp.pixelplumbing.com/api-output#png
+                  png: {
+                    progressive: true,
+                    compressionLevel: 9,
+                    palette: true,
+
+                  },
+    
+                  // gif does not support lossless compression at all
+                  // https://sharp.pixelplumbing.com/api-output#gif
+                  gif: {
+                    progressive: true,
+                    interFrameMaxError: 8,
+                  },
+                },
+              },
             },
+            // minimizerOptions: {
+            //   implementation: ImageMinimizerPlugin.imageminMinify,
+            //   plugins: [
+            //     ['gifsicle', { interlaced: true }],
+            //     ['jpegtran', { progressive: true }],
+            //     ['pngquant', { quality: [0.65, 0.9] }],
+            //     ['optipng', { optimizationLevel: 5 }],
+            //     [
+            //       "svgo",
+            //       {
+            //         plugins: [
+            //           "removeTitle",
+            //           "removeDesc",
+            //           "removeUselessStrokeAndFill",
+            //           "removeUnusedNS",
+            //           "cleanupIDs",
+            //           "convertShapeToPath",
+            //           "cleanupNumericValues",
+            //           "removeRasterImages",
+            //           "removeDimensions",
+            //           "removeStyleElement",
+            //           "removeScriptElement",
+            //           // your previous configuration...
+            //           {
+            //             name: "preset-default",
+            //             params: {
+            //               overrides: {
+            //                 removeViewBox: false,
+            //                 addAttributesToSVGElement: {
+            //                   params: {
+            //                     attributes: [
+            //                       { xmlns: "http://www.w3.org/2000/svg" },
+            //                     ],
+            //                   },
+            //                 },
+            //               },
+            //             },
+            //           },
+            //         ],
+            //       },
+            //     ]
+                
+            //   ],
+            // },
           }),
         ],
       },

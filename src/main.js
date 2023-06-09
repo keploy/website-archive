@@ -27,8 +27,8 @@ import './js/mail-script.js';
 import './js/active.js';
 import './js/theme.js';
 
-
-import twitterLogo from './img/twitter.png';
+const sitemap = require('./sitemap.xml');
+const robots = require('./robots.txt');
 
 
 
