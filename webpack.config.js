@@ -16,6 +16,10 @@ const PATHS = {
 
 module.exports = {
     entry: './src/main.js',
+    mode: 'development',
+    devServer: {
+      static: "./dist",
+    },
     output: {
       filename: '[name].js',
       path: path.resolve(__dirname, 'dist'),
