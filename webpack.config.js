@@ -10,11 +10,15 @@ const TerserPlugin = require('terser-webpack-plugin');
 const ImageMinimizerPlugin = require('imagemin-webpack-plugin').default;
 const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
 
+var webpack = require("webpack");
+
+
 const PATHS = {
   src: path.join(__dirname, "src"),
 };
 
 module.exports = {
+  stats: 'verbose',
     entry: './src/main.js',
     mode: 'development',
     devServer: {
@@ -24,11 +28,26 @@ module.exports = {
       filename: '[name].js',
       path: path.resolve(__dirname, 'dist'),
       assetModuleFilename: "assets/[name][hash][ext][query]",
+      globalObject: 'this',
+      libraryTarget: 'umd',
+
+    },
+    // externals: {
+    //   jquery: 'jQuery',
+    // },
+    externalsPresets: {
+      web: true,
     },
     module: {
+    //   loaders: [
+    //     {
+    //         test: /[\/\\]node_modules[\/\\]some-module[\/\\]index\.js$/,
+    //         loader: "imports-loader?this=>window"
+    //     }
+    // ],
         rules: [
           {
-            test: /\.js$/, // Apply this rule to files ending in .js
+            test: /\.m?js$/, // Apply this rule to files ending in .js
             exclude: /(node_modules)/, // Do not apply to files residing in node_modules
             use: {
               loader: 'babel-loader', // Use this loader
@@ -37,6 +56,9 @@ module.exports = {
               },
             },
           },
+          // { test: /jquery\.magnific-popup\.min\.js$/, loader: 'script-loader' },
+          // { test: /jquery\.nice-select\.min\.js$/, loader: 'script-loader' },
+          // { test: /imagesloaded\.pkgd\.min\.js$/, loader: 'script-loader' },
           {
             test:/(\.css)$/, // Apply rule to .css files
             sideEffects: true,
@@ -108,6 +130,7 @@ module.exports = {
         ],
       },
     optimization: {
+      sideEffects: true,
         minimize: true,
         splitChunks: {
           cacheGroups: {
@@ -132,7 +155,7 @@ module.exports = {
               ],
             },
     }),
-          new TerserPlugin(),
+          // new TerserPlugin(),
           new ImageMinimizerPlugin({
             minimizer: {
               implementation: ImageMinimizerPlugin.sharpMinify,
@@ -212,17 +235,28 @@ module.exports = {
         ],
       },
     plugins: [
+      // new webpack.ProvidePlugin({
+      //   $: 'jquery',
+      //   jQuery: 'jquery',
+      // }),
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery', // Ensure jQuery is available in the global scope
+      }),
+
       new HtmlWebpackPlugin({
         template: './src/index.html',
         filename: 'index.html',
         chunks: ['main'], // Specify the chunks to include in this HTML file
-        inject: true,
+        inject: 'body',
         favicon: './src/img/favicon.ico'
       }),
       new HtmlWebpackPlugin({
         template: './src/privacy.html',
         filename: 'privacy.html',
         chunks: ['main'], // Specify the chunks to include in this HTML file
+        inject: 'body',
         favicon: './src/img/favicon.ico'
       }),
         new MiniCssExtractPlugin({

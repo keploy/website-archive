@@ -1,13 +1,21 @@
+const imagesLoaded = require('imagesloaded');
+
+$.fn.imagesLoaded = imagesLoaded;
+
 (function ($) {
     'use strict';
     if ($.fn.imagesLoaded) {
+        console.log("images loaded")
+        debugger;
         $('.alime-portfolio').imagesLoaded(function () {
+            console.log("alime-portfolio images loaded")
             // filter items on button click
             $('.portfolio-menu').on('click', 'button', function () {
                 var filterValue = $(this).attr('data-filter');
                 $grid.isotope({
                     filter: filterValue
                 });
+                console.log("updating isotope filter to: " + filterValue)
             });
             // init Isotope
             var $grid = $('.alime-portfolio').isotope({
@@ -45,12 +53,13 @@
     // :: 8.0 Stick Active Code
     // ************************
 
-    alime_window.on('scroll', function () {
-        if (alime_window.scrollTop() > 0) {
-            $('.main-header-area').addClass('sticky');
-        } else {
-            $('.main-header-area').removeClass('sticky');
-        }
-    });
+    // alime_window.on('scroll', function () {
+    //     if (alime_window.scrollTop() > 0) {
+    //         $('.main-header-area').addClass('sticky');
+    //     } else {
+    //         $('.main-header-area').removeClass('sticky');
+    //     }
+    // });
 })(jQuery);
 
+console.log("active.js loaded and the loaded jquery plugins are: " + Object.keys(jQuery.fn))

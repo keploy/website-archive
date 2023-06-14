@@ -4,32 +4,34 @@
 // import './privacy.html';
 
 // Your styles
-import './css/main.css';
+// import './css/main.css';
+
+// main.js
+
+require('./css/main.css');
 
 // Vendor scripts
-import './vendors/nice-select/js/jquery.nice-select.min.js';
-import './vendors/isotope/imagesloaded.pkgd.min.js';
-import './vendors/isotope/isotope-min.js';
-import './vendors/owl-carousel/owl.carousel.min.js';
-import './vendors/counter-up/jquery.waypoints.min.js';
-import './vendors/counter-up/jquery.counterup.min.js';
-
-import $ from 'jquery';
+require('./vendors/nice-select/js/jquery.nice-select.min.js');
+// require('./vendors/isotope/imagesloaded.pkgd.min.js');
+require('./vendors/isotope/isotope-min.js');
+require('./vendors/owl-carousel/owl.carousel.min.js');
+require('./vendors/counter-up/jquery.waypoints.min.js');
+require('./vendors/counter-up/jquery.counterup.min.js');
 
 // Your scripts
-import './js/jquery-3.2.1.min.js';
-import './js/popper.js';
-import './js/bootstrap.min.js';
-import './js/stellar.js';
-import './js/jquery.magnific-popup.min.js';
-import './js/jquery.ajaxchimp.min.js';
-import './js/mail-script.js';
-import './js/active.js';
-import './js/theme.js';
+require('./js/popper.js');
+require('./js/bootstrap.min.js');
+require('./js/stellar.js');
+require('./js/jquery.magnific-popup.min.js');
+require('./js/jquery.ajaxchimp.min.js');
+require('./js/mail-script.js');
+require('./js/theme.js');
+
+require('./js/active.js');
+
+
+console.log('main.js is loaded');
 
 const sitemap = require('./sitemap.xml');
 const robots = require('./robots.txt');
-
-
-
 
