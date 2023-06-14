@@ -23,7 +23,7 @@ require('./js/popper.js');
 require('./js/bootstrap.min.js');
 require('./js/stellar.js');
 require('./js/jquery.magnific-popup.min.js');
-require('./js/jquery.ajaxchimp.min.js');
+// require('./js/jquery.ajaxchimp.min.js');
 require('./js/mail-script.js');
 require('./js/theme.js');
 
