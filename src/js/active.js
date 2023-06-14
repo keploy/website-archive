@@ -1,21 +1,41 @@
 const imagesLoaded = require('imagesloaded');
+var jQueryBridget = require('jquery-bridget');
+
+const isotope = require('isotope-layout');
 
 $.fn.imagesLoaded = imagesLoaded;
+// $.fn.isotope = function(opts) {
+//     this.each(function() {
+//         if (!$(this).data('isotope')) {
+//             $(this).data('isotope', new isotope(this, opts));
+//         }
+//     });
+//     return this;
+// };
+
+jQueryBridget( 'isotope', isotope, $ );
+
 
 (function ($) {
     'use strict';
     if ($.fn.imagesLoaded) {
-        console.log("images loaded")
-        debugger;
-        $('.alime-portfolio').imagesLoaded(function () {
-            console.log("alime-portfolio images loaded")
+        // console.log("images loaded")
+        
+        // if ($('.alime-portfolio').length) {
+        //     console.log("Elements with class 'alime-portfolio' exist", $('.alime-portfolio').length);
+        // } else {
+        //     console.log("No elements with class 'alime-portfolio' found");
+        // }
+
+        imagesLoaded( $('.alime-portfolio'), function() {
+            // console.log("alime-portfolio images loaded")
             // filter items on button click
             $('.portfolio-menu').on('click', 'button', function () {
                 var filterValue = $(this).attr('data-filter');
                 $grid.isotope({
                     filter: filterValue
                 });
-                console.log("updating isotope filter to: " + filterValue)
+                // console.log("updating isotope filter to: " + filterValue)
             });
             // init Isotope
             var $grid = $('.alime-portfolio').isotope({
@@ -29,8 +49,12 @@ $.fn.imagesLoaded = imagesLoaded;
             $grid.isotope({
                 filter: inititalFilterValue
             })
-        });
+        })
+
+        
     }
+
+
 
 
     // ***********************************
@@ -62,4 +86,4 @@ $.fn.imagesLoaded = imagesLoaded;
     // });
 })(jQuery);
 
-console.log("active.js loaded and the loaded jquery plugins are: " + Object.keys(jQuery.fn))
+// console.log("active.js loaded and the loaded jquery plugins are: " + Object.keys(jQuery.fn))

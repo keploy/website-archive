@@ -155,7 +155,7 @@ module.exports = {
               ],
             },
     }),
-          // new TerserPlugin(),
+          new TerserPlugin(),
           new ImageMinimizerPlugin({
             minimizer: {
               implementation: ImageMinimizerPlugin.sharpMinify,

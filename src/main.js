@@ -13,7 +13,7 @@ require('./css/main.css');
 // Vendor scripts
 require('./vendors/nice-select/js/jquery.nice-select.min.js');
 // require('./vendors/isotope/imagesloaded.pkgd.min.js');
-require('./vendors/isotope/isotope-min.js');
+// require('./vendors/isotope/isotope-min.js');
 require('./vendors/owl-carousel/owl.carousel.min.js');
 require('./vendors/counter-up/jquery.waypoints.min.js');
 require('./vendors/counter-up/jquery.counterup.min.js');
@@ -30,7 +30,7 @@ require('./js/theme.js');
 require('./js/active.js');
 
 
-console.log('main.js is loaded');
+// console.log('main.js is loaded');
 
 const sitemap = require('./sitemap.xml');
 const robots = require('./robots.txt');
