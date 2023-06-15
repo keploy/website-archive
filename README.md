@@ -58,9 +58,11 @@ If you wish to contribute, we highly recommend following the guidelines mentione
 
 ```bash
    git clone https://github.com/<GITHUB_USERNAME>/website.git
+   npm install
+   npm run dev # or npm run build
 ```
 
-**3.** Open your preferred IDE (Integrated Development Environment) such as Visual Studio Code.
+<!-- **3.** Open your preferred IDE (Integrated Development Environment) such as Visual Studio Code.
 
 **4.** Navigate to the project directory. Open the folder 'website' in your IDE.
 
@@ -68,7 +70,7 @@ If you wish to contribute, we highly recommend following the guidelines mentione
 
 **6.** Save the file and open it in your web browser by simply double-clicking on the file.
 
-**7.** Alternatively, you can also open the file from within the IDE using the "Open in Default Browser" feature or a browser extension like "Live Server" for VSCode.
+**7.** Alternatively, you can also open the file from within the IDE using the "Open in Default Browser" feature or a browser extension like "Live Server" for VSCode. -->
 
 
 **8.** Stage your changes and commit.
