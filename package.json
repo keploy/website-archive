@@ -1,0 +1,45 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\"> Welcome to website of Keploy 👋 </h1>",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack serve --open",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "stats": "webpack --stats-modules-space 999"
+  },
+  "sideEffects": false,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.4",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.0",
+    "cssnano-preset-advanced": "^6.0.1",
+    "html-webpack-plugin": "^5.5.1",
+    "image-minimizer-webpack-plugin": "^3.8.2",
+    "imagemin": "^8.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "imports-loader": "^4.0.1",
+    "mini-css-extract-plugin": "^2.7.6",
+    "purgecss-webpack-plugin": "^5.0.0",
+    "script-loader": "^0.7.2",
+    "webpack": "^5.86.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.0"
+  },
+  "dependencies": {
+    "imagesloaded": "^4.1.0",
+    "isotope-layout": "^3.0.6",
+    "jquery": "^3.7.0",
+    "jquery-bridget": "^3.0.1"
+  }
+}

@@ -1,7 +1,7 @@
 
     // -------   Mail Send ajax Newsletter
 
-    $(document).ready(function() {
+    jQuery(function() {
         var form = $('#mc_embed_signup'); // contact form
         var submit = $('.submit-btn'); // submit button
         var alert = $('.alert-msg'); // alert div for show alert message

@@ -1406,7 +1406,7 @@ button:focus {
   position: relative; }
   .reservation_form_area .res_form_inner:before {
     content: "";
-    background: url(../img/contact-shap-1.png);
+    /* background: url(../img/contact-shap-1.png); */
     position: absolute;
     left: -125px;
     height: 421px;
@@ -1415,7 +1415,7 @@ button:focus {
     transform: translateY(-50%); }
   .reservation_form_area .res_form_inner:after {
     content: "";
-    background: url(../img/contact-shap-2.png);
+    /* background: url(../img/contact-shap-2.png); */
     position: absolute;
     right: -125px;
     height: 421px;
@@ -2502,7 +2502,7 @@ h6 {
   color: #222222; }
 
 .primary-checkbox input:checked + label {
-  background: url(../img/elements/primary-check.png) no-repeat center center/cover;
+  /* background: url(../img/elements/primary-check.png) no-repeat center center/cover; */
   border: none; }
 
 .confirm-checkbox {
@@ -2536,7 +2536,7 @@ h6 {
   border: 1px solid #f1f1f1; }
 
 .confirm-checkbox input:checked + label {
-  background: url(../img/elements/success-check.png) no-repeat center center/cover;
+  /* background: url(../img/elements/success-check.png) no-repeat center center/cover; */
   border: none; }
 
 .disabled-checkbox {
@@ -2574,7 +2574,7 @@ h6 {
   z-index: 3; }
 
 .disabled-checkbox input:checked + label {
-  background: url(../img/elements/disabled-check.png) no-repeat center center/cover;
+  /* background: url(../img/elements/disabled-check.png) no-repeat center center/cover; */
   border: none; }
 
 .primary-radio {
@@ -2608,7 +2608,7 @@ h6 {
   border: 1px solid #f1f1f1; }
 
 .primary-radio input:checked + label {
-  background: url(../img/elements/primary-radio.png) no-repeat center center/cover;
+  /* background: url(../img/elements/primary-radio.png) no-repeat center center/cover; */
   border: none; }
 
 .confirm-radio {
@@ -2642,7 +2642,7 @@ h6 {
   border: 1px solid #f1f1f1; }
 
 .confirm-radio input:checked + label {
-  background: url(../img/elements/success-radio.png) no-repeat center center/cover;
+  /* background: url(../img/elements/success-radio.png) no-repeat center center/cover; */
   border: none; }
 
 .disabled-radio {
@@ -2689,7 +2689,7 @@ h6 {
   padding: 0px; }
 
 .disabled-radio input:checked + label {
-  background: url(../img/elements/disabled-radio.png) no-repeat center center/cover;
+  /* background: url(../img/elements/disabled-radio.png) no-repeat center center/cover; */
   border: none; }
 
 .default-select {
