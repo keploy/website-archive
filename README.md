@@ -21,11 +21,23 @@
 [Keploy](https://keploy.io) is a no-code testing platform that generates tests from API calls.
 
 ## Color palette
-|Keploy Orange (Primary) |![#ff904d](https://placehold.co/15x15/ff904d/ff904d.png) `#ff904d`| rgb(255, 144, 77) | 	hsl(23, 100%, 65%) | CMYK(0 ,44, 70, 0) |
-| --------------- | --------------- | --------------- | --------------- |--------------- |
-|Keploy Brown (Secondary) |![#644a3c](https://placehold.co/15x15/644a3c/644a3c.png) `#644a3c`|rgb(100, 74, 60) | 	hsl(21, 25%, 31%)| CMYK(0, 26, 40, 61) |
-|Keploy Black (Secondary) |![#000000](https://placehold.co/15x15/000000/000000.png) `#000000`|rgb(0, 0, 0) | 	hsl(0, 0%, 0%)| CMYK(3, 3, 3, 100) |
-|Keploy White (Secondary) |![#FFFFFF](https://placehold.co/15x15/FFFFFF/FFFFFF.png) `#000000`|rgb(255, 255, 255) | 	hsl(0, 0%, 100%)| CMYK(0, 0, 0, 0) |
+This README guide provides an overview of the color palette used in the project, along with their respective purposes and usage.
+
+| Color Name   | Purpose                                   | Color Patch                                                 | Hash Value |
+|--------------|-------------------------------------------|------------------------------------------------------------|------------|
+| Primary Color| Primary headings, primary buttons, main elements | ![#FF914D](https://via.placeholder.com/20/FF914D?text=+) | `#FF914D` |
+| Secondary Color | Backgrounds, borders, subtle accents  | ![#00163D](https://via.placeholder.com/20/00163D?text=+)   | `#00163D` |
+| Neutral Colors | Backgrounds, borders, subtle accents | ![#F5F5F5](https://via.placeholder.com/20/F5F5F5?text=+) <br> ![#FFF](https://via.placeholder.com/20/FFF?text=+) <br> ![#E6E2D4](https://via.placeholder.com/20/E6E2D4?text=+) | `#F5F5F5` <br> `#FFF` <br> `#E6E2D4` |
+| Accent Colors | Success messages, notifications, progress indicators | ![#16704C](https://via.placeholder.com/20/16704C?text=+) | `#16704C` |
+|               | Highlights, icons, creative sections | ![#5F3131](https://via.placeholder.com/20/5F3131?text=+)   | `#5F3131` |
+|               | Attention-grabbing elements, notifications, important highlights | ![#EF546B](https://via.placeholder.com/20/EF546B?text=+) <br> ![#D9CD9C](https://via.placeholder.com/20/D9CD9C?text=+) | `#EF546B` <br> `#D9CD9C` |
+| Gradient Colors | - | ![#F5F5F5](https://via.placeholder.com/20/F5F5F5?text=+) <br> ![#E35134](https://via.placeholder.com/20/E35134?text=+) <br> ![#FF914D](https://via.placeholder.com/20/FF914D?text=+) <br> ![#BE2C1B](https://via.placeholder.com/20/BE2C1B?text=+) <br> ![#6F0A0D](https://via.placeholder.com/20/6F0A0D?text=+) | `#F5F5F5` <br> `#E35134` <br> `#FF914D` <br> `#BE2C1B` <br> `#6F0A0D` |
+
+This README guide provides a quick reference to the colors in the palette and their intended purposes. Use this guide to ensure consistent usage of colors throughout the project and to maintain a cohesive visual style.
+
+Feel free to discuss and customize the README guide further based on your project requirements and additional details you'd like to include.
+
+---
 
 ## Community support
 We'd love to collaborate with you to make Keploy great. To get started:
